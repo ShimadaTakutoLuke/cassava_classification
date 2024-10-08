@@ -1,0 +1,12 @@
+matplotlib
+jupyter
+ipykernel
+tqdm
+japanize-matplotlib
+seaborn
+requests
+ultralytics
+scikit-learn
+timm
+fireducks
+opencv-python

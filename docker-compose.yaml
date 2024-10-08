@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  melon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    shm_size: '2gb'
+    container_name: 'cassava_classification'
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/home
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              count: 1
